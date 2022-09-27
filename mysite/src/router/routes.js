@@ -24,8 +24,8 @@ const routes = [
     component: aboutSite,
   },
   {
-    path: "/postDetails",
-    name: "postDetails",
+    path: "/postdetails",
+    name: "postdetails",
     component: postDetails,
   },
   {

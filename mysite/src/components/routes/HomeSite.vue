@@ -1,6 +1,6 @@
 <template>
 <div>
-    <HeaderSite />
+    <HeaderSite templateName="Home" />
     <BannerStarts />
     <BlogPosts />
     <FooterSite />

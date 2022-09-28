@@ -6,4 +6,6 @@ we created this site using VUE JS FrameWork and have used these subjects:
 4) Routing 
 5) npmjs libraries
 6) MongoDB Database
+7) Passing data from child to parent
+
 

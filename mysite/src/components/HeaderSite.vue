@@ -2,7 +2,7 @@
   <header class="">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <router-link class="navbar-brand" :to="{name : 'Home'}"> Simchi WebSite </router-link>
+        <router-link class="navbar-brand" :to="{name : 'Home'}"> <h2>Simchi Website<em>.</em></h2> </router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

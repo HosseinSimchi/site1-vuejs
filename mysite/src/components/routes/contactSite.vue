@@ -69,16 +69,15 @@
     <div class="content">
     <ul>
     <li>
-    <h5>090-484-8080</h5>
+    <h5>{{phone}}</h5>
     <span>PHONE NUMBER</span>
     </li>
     <li>
-    <h5>info@company.com</h5>
+    <h5>{{email}}</h5>
     <span>EMAIL ADDRESS</span>
     </li>
     <li>
-    <h5>123 Aenean id posuere dui, 
-    <br>Praesent laoreet 10660</h5>
+    <h5>{{address}}</h5>
     <span>STREET ADDRESS</span>
     </li>
     </ul>
@@ -107,6 +106,13 @@
 import HeaderSite from '../HeaderSite.vue';
 import FooterSite from '../FooterSite.vue';
 export default {
+  data () {
+    return {
+      email : "hsimchi74@gmail.com",
+      phone : "+98 935 199 6829",
+      address : "Iran, Tehran"
+    }
+  },
     name: "contactSite",
     components: { HeaderSite, FooterSite }
 }

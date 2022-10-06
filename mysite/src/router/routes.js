@@ -4,7 +4,7 @@ import blogSite from "../components/routes/blogSite";
 import contactSite from "../components/routes/contactSite";
 import postDetails from "../components/routes/postDetails";
 import HomeSite from "../components/routes/HomeSite";
-
+import signIn from "../components/routes/signIn";
 
 
 const routes = [
@@ -17,6 +17,11 @@ const routes = [
     path: "/contact",
     name: "contact",
     component: contactSite,
+  },
+  {
+    path: "/signin",
+    name: "signIn",
+    component: signIn,
   },
   {
     path: "/about",

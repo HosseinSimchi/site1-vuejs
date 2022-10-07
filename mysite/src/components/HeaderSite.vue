@@ -92,6 +92,11 @@
               <router-link class="nav-link" :to="{name:'contact'}">Contact Us<span class="sr-only">(current)</span></router-link>
             </li>
           </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{name:'signIn'}">Sign In / Sign Up</router-link>
+            </li> 
+          </ul>
         </div>
       </div>
     </nav>

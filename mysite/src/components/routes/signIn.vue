@@ -8,37 +8,26 @@
 	</span>
 
 	<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-		<input class="input100" type="text" id = "username" name="username" placeholder="Username" v-model="username">
+		<input class="input100" type="text" name="username" placeholder="Username" v-model.lazy="username">
 		<span class="focus-input100"></span>
 	</div>
 
-	<div class="wrap-input100 validate-input" data-validate = "Please enter password">
-		<input class="input100" id = "password" type="password" name="pass" placeholder="Password" v-model="password">
+	<div class="wrap-input100 validate-input m-b-16" data-validate = "Please enter password">
+		<input class="input100" type="password" name="password" placeholder="Password" v-model.lazy="password">
 		<span class="focus-input100"></span>
-	</div>
-
-	<div class="text-right p-t-13 p-b-23">
-		<span class="txt1">
-		Forgot
-		</span>
-
-		<a href="#" class="txt2">
-		Username / Password?
-		</a>
 	</div>
 
 	<div class="container-login100-form-btn">
-		<input type="submit" value="Submit" v-on:click="sendData()" />
+		<button type="button" class="login100-form-btn" v-on:click="postData()">
+			Sign in
+		</button>	
 	</div>
 
 	<div class="flex-col-c p-t-170 p-b-40">
 		<span class="txt1 p-b-9">
 		Don’t have an account?
 		</span>
-
-		<a href="#" class="txt3">
-		Sign up now
-		</a>
+		<router-link class="txt3" :to="{name : 'signUp'}">Sign Up</router-link>
 	</div>
 </form>
 </div>
@@ -49,21 +38,30 @@
 
 
 <script>
-// const $ = document
+import axios from 'axios';
+
 export default {
-    name : "signIn",
-	data () {
-		return {
-			username : " ",
-			password : " "
-		}
-	},
-	methods : {
-		sendData(event){
-			event.preventDefault();
-			console.log(this.username);
-		}
-	}
+    name: "signIn",
+    data() {
+        return {
+            username: "",
+            password: ""
+        };
+    },
+    methods: {
+        async postData() {
+            try {
+                await axios.post("http://localhost:3000/user", {
+                    username: this.username,
+                    password: this.password
+                });
+                this.$router.push("/");
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+    }
 }
 </script>
 

@@ -5,7 +5,7 @@ import contactSite from "../components/routes/contactSite";
 import postDetails from "../components/routes/postDetails";
 import HomeSite from "../components/routes/HomeSite";
 import signIn from "../components/routes/signIn";
-
+import signUp from "../components/routes/signUp";
 
 const routes = [
   {
@@ -22,6 +22,11 @@ const routes = [
     path: "/signin",
     name: "signIn",
     component: signIn,
+  },
+  {
+    path: "/signup",
+    name: "signUp",
+    component: signUp,
   },
   {
     path: "/about",

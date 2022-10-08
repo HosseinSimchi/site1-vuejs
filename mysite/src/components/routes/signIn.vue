@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="container-login100-form-btn">
-		<button type="button" class="login100-form-btn" v-on:click="postData()">
+		<button type="button" class="login100-form-btn" v-on:click="getData()">
 			Sign in
 		</button>	
 	</div>
@@ -49,13 +49,13 @@ export default {
         };
     },
     methods: {
-        async postData() {
+        async getData() {
             try {
-                await axios.post("http://localhost:3000/user", {
-                    username: this.username,
-                    password: this.password
-                });
-                this.$router.push("/");
+                await axios.post("http://localhost:3000/user/signin",{
+					username : this.username,
+					password : this.password
+				});
+				this.$router.push("/");
             }
             catch (err) {
                 console.log(err);

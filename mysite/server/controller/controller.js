@@ -46,6 +46,11 @@ exports.signinHandeler = async (req, res) => {
     try {
         const {username, password} = req.body
         const response = await User.findOne({username})
-        console.log(response);
+        const passwordCompare = await bcrypt.compare(password, response.password)
+        if (passwordCompare){
+            res.status(200).json(username)
+        }else{
+            console.log("The password is Wrong!");
+        }
     }catch(err){console.log(err)}
 }

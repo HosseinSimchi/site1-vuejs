@@ -20,7 +20,8 @@ components : {
     HeaderSite,
     FooterSite,
     BlogPosts,
-}
+},
+
 }
 </script>
   

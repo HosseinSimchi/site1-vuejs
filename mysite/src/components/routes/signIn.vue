@@ -39,7 +39,6 @@
 
 <script>
 import axios from 'axios';
-import eventBus from '../../eventBus';
 
 export default {
     name: "signIn",
@@ -55,8 +54,8 @@ export default {
                 await axios.post("http://localhost:3000/user/signin",{
 					username : this.username,
 					password : this.password
-				});
-				eventBus.$emit("username",this.username)
+				});	
+				this.$root.$emit("usernameEvent", this.username)
 				this.$router.push("/");
             }
             catch (err) {

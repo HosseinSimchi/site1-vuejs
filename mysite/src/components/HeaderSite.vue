@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto" v-if = "templateName=='Home'">
-            <li class="nav-item active">
+            <li class="nav-item">
               <router-link class="nav-link" :to="{name:'Home'}">Home<span class="sr-only">(current)</span></router-link>
             </li> 
             <li class="nav-item">
@@ -105,16 +105,12 @@
   
 <script>
 
-
 export default {
 name: 'HeaderSite',
-data () {
-  return {
-    username : "SIMCHI WEBSITE",
-  }
-},
+
 props : {
   templateName : {type : String, default : 'Home'},
+  username: {type : String}
 }
 }
 </script>

@@ -55,7 +55,7 @@ export default {
 					username : this.username,
 					password : this.password
 				});	
-				this.$root.$emit("usernameEvent", this.username)
+				this.emitter.emit('Username', {'username': `${this.username}`});
 				this.$router.push("/");
             }
             catch (err) {

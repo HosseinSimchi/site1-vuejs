@@ -1,6 +1,5 @@
 <template>
 <div>   
-    <HeaderSite templateName="Blog" />
 
     <div class="heading-page header-text">
       <section class="page-heading">
@@ -306,12 +305,10 @@
 </template>
 
 <script>
-import HeaderSite from '../HeaderSite.vue';
 import FooterSite from '../FooterSite.vue';
 export default {
 name: 'blogSite',
 components : {
-    HeaderSite,
     FooterSite
 }
 }

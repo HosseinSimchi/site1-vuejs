@@ -54,3 +54,11 @@ exports.signinHandeler = async (req, res) => {
         }
     }catch(err){console.log(err)}
 }
+
+
+exports.logoutHandler = (req, res, next) => {
+    if (req.session.loggedin) {
+        req.session.loggedin = false;
+        res.status(200);
+  }
+}
